@@ -10,7 +10,7 @@ java -cp Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.kal.ssps
 ```
 
 
-In Order to Scale out the system to consumer from multipe source : Event-Driver Sent
+In Order to Scale out the system to consumer from multipe source : Server Sent Event 
 
 Run Producer in multiple Machine:
 The source will consume and sent to kafka cluster with specific kafka topic
@@ -24,5 +24,4 @@ The result will print out in system, or will be send to the other kafka topic fo
 ```
 java -cp target/Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.kal.ssps.SSPSStream </path/to/file/kafkaconfig>
 ```
-
 
