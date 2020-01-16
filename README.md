@@ -18,12 +18,15 @@ B. Scalability
  Questions: If all events could not be processed on a single processor, or a single machine?
 
 In Order to Scale out the system to consumer from multipe source : Server Sent Event 
-Run Producer in multiple Machine:
 The source will consume from Server Sent Event writen by rxJava and sent to kafka cluster with specific kafka topic 'ssps_stat' or can change in configFile.
+
+I. Run Producer in multiple Machine:
 
 ```
 java -cp target/Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.kal.ssps.SSPSProducer </path/to/file/kafkaconfig>
 ```
+
+II. Run Kafka Steam to count and print result:
 
 Capture the result by Kafka Stream and aggregate on one second intervals grouped by device, title, country to compute counts for these combinations. Events with sev = “success” count as a successful stream start, this is what we want to count.
 
