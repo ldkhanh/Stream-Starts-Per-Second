@@ -11,6 +11,7 @@ The Producer and Consumer with embedding inside SSPDriverStandalone Class
 ```
 java -cp Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.kal.ssps.SSPDriverStandalone </path/to/file/kafkaconfig>
 ```
+Ps: Due to connection to Confluent Cluster, initialize take 1-2mins ( I will check the reason slow init)
 
 B. scalability
 
