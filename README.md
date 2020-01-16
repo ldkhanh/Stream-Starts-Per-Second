@@ -13,13 +13,13 @@ java -cp target/Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.k
 ```
 Ps: Due to connection to Confluent Cluster, initialize take 1-2mins ( I will check the reason slow init)
 
-B. scalability
+B. Scalability
 
  Questions: If all events could not be processed on a single processor, or a single machine?
 
 In Order to Scale out the system to consumer from multipe source : Server Sent Event 
 Run Producer in multiple Machine:
-The source will consume from Server Sent Event writen by rxJavaand sent to kafka cluster with specific kafka topic 'ssps_stat' or can change in configFile.
+The source will consume from Server Sent Event writen by rxJava and sent to kafka cluster with specific kafka topic 'ssps_stat' or can change in configFile.
 
 ```
 java -cp target/Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.kal.ssps.SSPSProducer </path/to/file/kafkaconfig>
@@ -37,3 +37,8 @@ java -cp target/Stream-Starts-Per-Second-1.0-SNAPSHOT-jar-dependencies.jar com.k
 
 Question: How can your solution handle variations in data volume throughout the day?
 I can change to use Avro schema? We can have fexible data format and serialization in Generic.
+
+
+Example Output Kakfa Stream Count SPSS:
+
+![stream count](https://github.com/ldkhanh/Stream-Starts-Per-Second/blob/master/Sample%20Output%20From%20KafkaStream%20Count.png)
